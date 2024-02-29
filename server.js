@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import { companyRouter } from "./router/companyRouter.js";
 import { CustomerRouter } from "./router/customerRouter.js";
 import { EmployeRouter } from "./router/EmployeRouter.js";
+import { salesRouter } from "./router/salesRouter.js";
 // import { UserRouter } from "./router/userRouter.js";
 // import { inventoryRouter } from "./router/inventoryRouter.js";
 // import { salesRouter } from "./router/salesRouter.js";
@@ -20,6 +21,8 @@ app.use("/api",CustomerRouter);
 // app.use("/api",inventoryRouter);
 // app.use("/api",salesRouter);
 app.use("/api",EmployeRouter)
+
+app.use("/api",salesRouter)
 
 mongoose
   .connect("mongodb+srv://komalprajapat267:1SqXaaRyOH1STqSt@komal.fjcbbzw.mongodb.net/", {
